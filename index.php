@@ -36,6 +36,25 @@ $cuenta = substr_count($cadena,"','") +1;
 
 
 <!DOCTYPE html>
+<!--
+   Copyright 2014 toolsapp.net dev.jsencian@gmail.com
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+ -->
+
+
+
+
 <html lang="es">
 <head>
 
@@ -56,6 +75,13 @@ $cuenta = substr_count($cadena,"','") +1;
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
+	  
+	  #about-modal img{float:left}.tt-hint{display:none}.control-group{margin-bottom:0}
+	  #about-modal img{paddin-right:10px}
+	  #about-modal .modal-body{margin-left:40px}
+
+	  
+	  
     </style>
     <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
 
@@ -184,11 +210,11 @@ $cuenta = substr_count($cadena,"','") +1;
                     <p>beta 0.2</p>
                 </div>
                 <div class="modal-body">
-                    <p><img src="ico/apple-touch-icon-144-precomposed.png"/></p>
-                    <p>Developed and maintained by <a href="mailto:shane.bell@gmail.com" target="_mail">Shane Bell</a></p>
-                    <p>Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_license">Apache License v2.0</a></p>
-                    <!--<p>Available from the <a href="https://chrome.google.com/webstore....." target="_webstore">Chrome Web Store</a></p> -->
-                    <p>Source code available at <a href="https://github.com/jsencianes/intool.git" target="_github">GitHub</a></p>
+					<p><img src="ico/apple-touch-icon-114-precomposed.png"/></p>
+					<p>&nbsp;&nbsp;Developed and maintained by <a href="mailto:dev.jsencian@gmail.com" target="_mail">dev.jsencian@gmail.com</a></p>
+					<p>&nbsp;&nbsp;Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_license">Apache License v2.0</a></p>
+					<!--<p>Available from the <a href="https://chrome.google.com/webstore....." target="_webstore">Chrome Web Store</a></p> -->
+					<p>&nbsp;&nbsp;Source code available at <a href="https://github.com/jsencianes/intool.git" target="_github">GitHub</a></p>
                 </div>
                 <div class="modal-footer">
                     <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
