@@ -100,8 +100,8 @@ $cuenta = substr_count($cadena,"','") +1;
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Main</a></li>
             <li><a href="#options">Options</a></li>
-            <li><a href="http://twitter.com/toolsappnet">About</a></li>
-
+            <!--<li><a href="http://twitter.com/toolsappnet">About</a></li>-->
+			<li> <a href="#" id="about" data-toggle="modal" data-target="#about-modal">About</a></li>
           </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
@@ -173,6 +173,33 @@ $cuenta = substr_count($cadena,"','") +1;
       </div>
     </div>
 
+	
+  <!-- About modal -->
+    <div id="about-modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3>Toolsapp.net</h3>
+                    <p>beta 0.2</p>
+                </div>
+                <div class="modal-body">
+                    <p><img src="ico/apple-touch-icon-144-precomposed.png"/></p>
+                    <p>Developed and maintained by <a href="mailto:shane.bell@gmail.com" target="_mail">Shane Bell</a></p>
+                    <p>Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_license">Apache License v2.0</a></p>
+                    <!--<p>Available from the <a href="https://chrome.google.com/webstore....." target="_webstore">Chrome Web Store</a></p> -->
+                    <p>Source code available at <a href="https://github.com/jsencianes/intool.git" target="_github">GitHub</a></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>	
+	
+	
+	
+	
 
   </div> <!-- /container -->
 
