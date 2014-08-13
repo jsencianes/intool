@@ -72,15 +72,116 @@ $cuenta = substr_count($cadena,"','") +1;
    <link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
 <!--   <link href="./css/bootstrap-theme.min.css" rel="stylesheet" media="screen"> -->
     <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
+
+	  
+	  body{padding-top:60px;padding-bottom:40px}.navbar-brand{padding-bottom:0;padding-top:4px;padding-left:4px;padding-right:4px}
 	  
 	  #about-modal img{float:left}.tt-hint{display:none}.control-group{margin-bottom:0}
 	  #about-modal img{paddin-right:10px}
 	  #about-modal .modal-body{margin-left:40px}
 
 	  
+		<!-- socicons -->
+		@font-face {
+		font-family: 'si';
+		src: url('./fonts/socicon/socicon.eot');
+		src: url('./fonts/socicon/socicon.eot?#iefix') format('embedded-opentype'),
+		 url('./fonts/socicon/socicon.woff') format('woff'),
+		 url('./fonts/socicon/socicon.ttf') format('truetype'),
+		 url('./fonts/socicon/socicon.svg#icomoonregular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+
+		}
+
+		@media screen and (-webkit-min-device-pixel-ratio:0) {
+		@font-face {
+		font-family:si;
+		src: url(./fonts/socicon/socicon.svg) format(svg);
+		}
+		}
+
+		.soc {
+		overflow:hidden;
+		margin:0; padding:0;
+		list-style:none;
+		}
+
+		.soc li {
+		display:inline-block;
+		*display:inline;
+		zoom:1;
+		text-align: center;
+		vertical-align: middle;
+		}
+		
+		.soc p {
+		
+		padding-top: 10px;
+		
+		}
+
+		.soc li a {
+		font-family:si!important;
+		font-style:normal;
+		font-weight:400;
+		-webkit-font-smoothing:antialiased;
+		-moz-osx-font-smoothing:grayscale;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-ms-box-sizing:border-box;
+		-o-box-sizing:border-box;
+		box-sizing:border-box;
+		-o-transition:.1s;
+		-ms-transition:.1s;
+		-moz-transition:.1s;
+		-webkit-transition:.1s;
+		transition:.1s;
+		-webkit-transition-property: transform;
+		transition-property: transform;
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+
+		overflow:hidden;
+		text-decoration:none;
+		text-align:center;
+		display:block;
+		position: relative;
+		z-index: 1;
+		width: 27px;
+		height: 27px;
+		line-height: 27px;
+		font-size: 14px;
+		-webkit-border-radius: 100px;
+		-moz-border-radius: 100px;
+		border-radius: 100px;
+		margin-right: 7px;
+		color: #ffffff;
+		background-color: #b0b0b0;
+		}
+
+		.soc a:hover {
+		z-index: 2;
+		background-color:#c4c4c4 !important;
+		}
+
+
+		.soc-icon-last{
+		margin:0 !important;
+		}
+
+		.soc-twitter:before {
+		content:'a';
+		}
+		.soc-github:before {
+		content:'Q';
+		}
+		.soc-email1:before {
+		content:'<';
+		}
+
+
+
 	  
     </style>
     <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
@@ -108,31 +209,50 @@ $cuenta = substr_count($cadena,"','") +1;
 
 <body>
 
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!--<img src="./ico/apple-touch-icon-72-precomposed.png" alt="Responsive image">-->
-          <a class="navbar-brand" href="#"> In() Tool</a>
+	
 
-
+		<!-- Navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+					
+                <a class="navbar-brand" href="#"><img src="ico/apple-touch-icon-144-rounded.png" width=40 height=40 alt="Responsive image"/></a>
+            </div>
+			
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">In() Tool</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Options<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">						
+							<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Add IN() statement</a></li>
+							<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Replace quotes with double quotes</a></li>
+							<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Reverse transformation</a></li>
+							<li class="divider"></li>
+							<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Delete duplicates</a></li>
+							<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Order ASC</a></li>
+							<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Order DESC</a></li>
+						</ul>
+					</li>
+					
+					<li><a href="#" id="about" data-toggle="modal" data-target="#about-modal">About</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Main</a></li>
-            <li><a href="#options">Options</a></li>
-            <!--<li><a href="http://twitter.com/toolsappnet">About</a></li>-->
-			<li> <a href="#" id="about" data-toggle="modal" data-target="#about-modal">About</a></li>
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </div><!-- /.navbar -->
-
+    </div>
+		
+	
+	
+	
+	
+	
+	
 
   <div class="container">
 
@@ -195,7 +315,20 @@ $cuenta = substr_count($cadena,"','") +1;
 
    <div class="footer">
       <div class="container">
-        <p class="text-muted">&copy; toolsapp.net 2014 | Follow us on <a href="http://twitter.com/toolsappnet" target="_blank"><img src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png" width=32 height=32 alt="follow us on Twitter" /></a></p>
+       <!--  <p class="text-muted">&copy; toolsapp.net 2014 | <a href="http://twitter.com/toolsappnet" target="_blank">Follow us on <img src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png" width=16 height=16 alt="follow us on Twitter" />@toolsappnet</a></p> -->
+	   
+
+	   
+	   <ul class="soc">
+	   
+	   	    <li><p class="text-muted">&copy; toolsapp.net 2014 |&nbsp;</p></li>
+			<li><a class="soc-twitter" href="http://twitter.com/toolsappnet" target="_blank"> @toolsappnet</a></li>
+			<li><a class="soc-github" href="https://github.com/jsencianes/intool.git" target="_github"></a></li>
+			<li><a class="soc-email1 soc-icon-last" href="mailto:dev.jsencian@gmail.com" target="_mail"></a></li>
+			
+		</ul>	   
+
+	   
       </div>
     </div>
 
@@ -210,11 +343,12 @@ $cuenta = substr_count($cadena,"','") +1;
                     <p>beta 0.2</p>
                 </div>
                 <div class="modal-body">
-					<p><img src="ico/apple-touch-icon-114-precomposed.png"/></p>
+					<p><img class="img-responsive" src="ico/apple-touch-icon-144-rounded.png" alt=""/></p>
 					<p>&nbsp;&nbsp;Developed and maintained by <a href="mailto:dev.jsencian@gmail.com" target="_mail">dev.jsencian@gmail.com</a></p>
 					<p>&nbsp;&nbsp;Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_license">Apache License v2.0</a></p>
 					<!--<p>Available from the <a href="https://chrome.google.com/webstore....." target="_webstore">Chrome Web Store</a></p> -->
 					<p>&nbsp;&nbsp;Source code available at <a href="https://github.com/jsencianes/intool.git" target="_github">GitHub</a></p>
+					<p>&nbsp;&nbsp;Follow us on <a href="http://twitter.com/toolsappnet" target="_blank">twitter</a></p>
                 </div>
                 <div class="modal-footer">
                     <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
@@ -222,8 +356,6 @@ $cuenta = substr_count($cadena,"','") +1;
             </div>
         </div>
     </div>	
-	
-	
 	
 	
 
@@ -237,9 +369,7 @@ $cuenta = substr_count($cadena,"','") +1;
    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
    <script src="./js/bootstrap.min.js"></script>
    <script src="./js/offcanvas.js"></script>
-
    <script src="./js/ZeroClipboard.min.js"></script>
-
    <script type="text/javascript">
 
       ZeroClipboard.config({ debug: false });
