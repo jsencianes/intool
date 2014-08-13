@@ -247,23 +247,13 @@ $cuenta = substr_count($cadena,"','") +1;
         </div>
     </div>
 		
-	
-	
-	
-	
-	
-	
-
-  <div class="container">
-
-<div>
-<blockquote>
-  <p>In()Tool helps you convert your column list of items in a valid SQL format <code>in(item1,item2,...itemn)</code> easily.</p>
-
-
-</blockquote>
-
-</div>
+<div class="container">
+			
+	<div>
+		<blockquote>
+			<p>In()Tool helps you convert your column list of items in a valid SQL format <code>in(item1,item2,...itemn)</code> easily.</p>
+		</blockquote>
+	</div>
 
     <div class="row">
 
@@ -287,8 +277,6 @@ $cuenta = substr_count($cadena,"','") +1;
         </div>
 
 
-
-
         <div class="col-sm-8">
 
 
@@ -310,11 +298,12 @@ $cuenta = substr_count($cadena,"','") +1;
 
 
         </div>
-    </div> <!-- row -->
+ 
+ </div> <!-- row -->
 
 
    <div class="footer">
-      <div class="container">
+      <div class="container-fluid">
        <!--  <p class="text-muted">&copy; toolsapp.net 2014 | <a href="http://twitter.com/toolsappnet" target="_blank">Follow us on <img src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png" width=16 height=16 alt="follow us on Twitter" />@toolsappnet</a></p> -->
 	   
 
